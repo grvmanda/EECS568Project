@@ -24,6 +24,7 @@ if makeVideo
 end
 
 frameRate=100;
+
 for t = 1:frameRate:numSteps
     figure(GLOBAL_FIGURE); clf; hold all;
     title('\textbf{Robot Trajectory}', 'Interpreter', 'latex');
@@ -37,8 +38,8 @@ for t = 1:frameRate:numSteps
     theta = data.filteredData(t, 7);
     plot(data.filteredData(1,5), data.filteredData(1,6), '*', 'Color', yellow, 'MarkerSize', 10);
     plot(data.filteredData(1:t,5), data.filteredData(1:t,6), 'Color', red, 'linewidth', 1.5);
-    plot(data.filteredData(1:t,11), data.filteredData(1:t,12), 'Color', blue, 'linewidth', 1.5);
-    plot(xgps.xGpsCg(1:t), ygps.yGpsCg(1:t), 'Color', green, 'linewidth', 1.5);
+    plot(data.filteredData(:,11), data.filteredData(:,12), 'Color', blue, 'linewidth', 1.5);
+    plot(xgps.xGpsCg(:), ygps.yGpsCg(:), 'Color', green, 'linewidth', 1.5);
     
     XL = get(gca, 'XLim');
     YL = get(gca, 'YLim');
