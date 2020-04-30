@@ -19,3 +19,8 @@
 1. Open MATLAB to the "src" folder. 
  
 2. Run the script "EKF_example.m". 
+
+## Running trajectory visualization
+1. Open MATLAB to the "utils" folder. 
+ 
+2. Run the script "visualize_path.m". 
